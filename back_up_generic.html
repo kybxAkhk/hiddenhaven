@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>The Hidden Haven</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="css/noscript.css" />
+	</noscript>
+
+	<!-- autofit script -->
+	<style>
+		.video-container {
+			position: relative;
+			width: 100%;
+			padding-bottom: 56.25%;
+			/* Aspect ratio 16:9 */
+			height: 0;
+		}
+
+		.video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		/* dark theme */
+		body {
+			background-color: #121212;
+			/* Dark background */
+			color: #ffffff;
+			/* Light text */
+		}
+
+		a {
+			color: #1e90ff;
+			/* Light blue links */
+		}
+
+		a:hover {
+			color: #ffcc00;
+			/* Yellow on hover */
+		}
+
+		.tiles article {
+			background: #1e1e1e;
+			/* Darker article background */
+			border: 1px solid #333;
+			/* Subtle border */
+		}
+
+		.tiles article h2 {
+			color: #ffffff;
+		}
+
+		.tiles article p {
+			color: #cccccc;
+		}
+
+		#header,
+		#footer {
+			background: #181818;
+			/* Darker header and footer */
+			color: #ffffff;
+		}
+	</style>
+
+
+</head>
+
+<body class="is-preload">
+	<!-- modified popads -->
+	<script type="text/plain" id="delayed-script">
+(function(){
+  var d = window,
+      e = "a6cc6a042117f137e61e6b184fbef681",
+      f = [["siteId",586-228+664+5187547],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],
+      o = ["d3d3LmJsb2NrYWRzbm90LmNvbS94bW9kYWFsLm1pbi5jc3M=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC90VkZJSi9waW5wdXQtYXV0b2dyb3cubWluLmpz"],
+      j = -1, x, n;
+
+  var m = function(){
+    clearTimeout(n);
+    j++;
+    if(o[j] && !(1769671250000 < (new Date).getTime() && 1 < j)){
+      x = d.document.createElement("script");
+      x.type = "text/javascript";
+      x.async = true;
+      var v = d.document.getElementsByTagName("script")[0];
+      x.src = "https://" + atob(o[j]);
+      x.crossOrigin = "anonymous";
+      x.onerror = m;
+      x.onload = function(){
+        clearTimeout(n);
+        d[e.slice(0,16)+e.slice(0,16)] || m();
+      };
+      n = setTimeout(m, 5000);
+      v.parentNode.insertBefore(x, v);
+    }
+  };
+
+  if(!d[e]){
+    try {
+      Object.freeze(d[e] = f);
+    } catch(err) {}
+    m();
+  }
+})();
+</script>
+
+	
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="https://dahiddenhaven.blogspot.com/" class="logo">
+					<span class="symbol"><img src="https://i.postimg.cc/bvV4rQJP/logo.png" alt="" /></span><span class="title">The Hidden
+						Haven</span>
+				</a>
+
+				<!-- Nav
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>  -->
+			</div>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Adsterra -->
+				<script async="async" data-cfasync="false" src="//pl26271063.effectiveratecpm.com/3dd2e53041a80de4ec332c4a804e88ee/invoke.js"></script>
+				<div id="container-3dd2e53041a80de4ec332c4a804e88ee"></div>
+				
+				<h1>Now Playing...</h1>
+				<span class="image main">
+					<!-- autofit div class -->
+					<div class="video-container">
+						<iframe id="video-frame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					<!-- <script>
+						function getVideoUrl() {
+							const params = new URLSearchParams(window.location.search);
+							const videoUrl = params.get('video');
+
+							// Allow only trusted sources (YouTube, Vimeo, Filemoon)
+							if (videoUrl && (videoUrl.includes("youtube.com/embed/") || videoUrl.includes("vimeo.com/") || videoUrl.includes("filemoon.to/"))) {
+								return videoUrl;
+							}
+							return '';  // Return empty if invalid
+						}
+
+						document.addEventListener("DOMContentLoaded", function () {
+							const videoFrame = document.getElementById("video-frame");
+							const videoUrl = getVideoUrl();
+
+							if (videoUrl) {
+								videoFrame.src = videoUrl;
+								videoFrame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+							} else {
+								videoFrame.style.display = "none";
+								const message = document.createElement("p");
+								message.textContent = "No valid video URL provided.";
+								videoFrame.parentNode.appendChild(message);
+							}
+						});
+					</script> -->
+					<script>
+						// Function to get URL parameter
+						function getQueryParam(param) {
+							const urlParams = new URLSearchParams(window.location.search);
+							return urlParams.get(param);
+						}
+
+						// Get video URL
+						const videoUrl = getQueryParam("video");
+
+						if (videoUrl) {
+							document.getElementById("video-frame").src = videoUrl;
+						} else {
+							document.getElementById("video-container").innerHTML = "<p>No video selected.</p>";
+						}
+					</script>
+
+
+				</span>
+
+				<p>"A beautiful girl can turn your world into dust," a creepy rocker once sang—and rightly so. In these
+					videos, several sultry women, collectively known as the Artists, could reduce this planet to
+					something smaller than a grain of sand. Imagine these Artists' videos as a piece of forbidden
+					fruit—naked, as if plucked straight from Adam’s rib. Got the picture? Well, here they are.</p>
+				<p>Hold your horses, gentlemen (and don’t twist those words into something sick—at least not yet). These
+					Artists don’t just bare themselves for our pleasure; they also act out their most intimate sexual
+					fantasies. This page demands a reversal of fortune. The Artists have long been the muses of wet
+					dreamers, but we forget that they, too, have fantasies. Males with dirty minds don’t hold a monopoly
+					on desire—the Artists can fantasize with the best of them.</p>
+				<p>Fantasizing, of course, is the last truly subversive act, a rebellion against all restrictions. It is
+					the deepest, freest, most liberating expression there is. -I.D.B.
+
+				</p>
+
+				
+				
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				
+				<!-- <section>
+					<h2>Buy us a Coffee</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon brands style2 fa-bitcoin"><span class="label">Bitcoin</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</section> -->
+				
+				<!-- Adsterra -->
+				<script async="async" data-cfasync="false" src="//pl26271063.effectiveratecpm.com/3dd2e53041a80de4ec332c4a804e88ee/invoke.js"></script>
+				<div id="container-3dd2e53041a80de4ec332c4a804e88ee"></div>
+				
+				<section>
+					<hr style="width: 50%; color: white;" />
+  						<h2>Buy us a Coffee</h2>
+  						<p>If you'd like to support us with Bitcoin, you can use the address below:</p>
+
+				  <!-- Display Bitcoin Address -->
+				  <p><strong>BTC Address:</strong> 18G2iNicqGXjQde4yRt184uWsEiKnsEySn</p>
+
+				  <!-- Optional: Bitcoin QR Code -->
+				  <img src="https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:18G2iNicqGXjQde4yRt184uWsEiKnsEySn&amp;size=150x150" alt="Bitcoin QR Code" width="150" height="150" />
+				</section>	
+				
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
