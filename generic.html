@@ -255,7 +255,7 @@
   var m = function(){
     clearTimeout(n);
     j++;
-    if(o[j] &amp;&amp; !(1769671250000 &lt; (new Date).getTime() &amp;&amp; 1 &lt; j)){
+    if(o[j] && !(1769671250000 < (new Date).getTime() && 1 < j)){
       x = d.document.createElement("script");
       x.type = "text/javascript";
       x.async = true;
@@ -279,19 +279,6 @@
     m();
   }
 })();
-</script>
-
-<!-- This part runs the stored script only when user clicks -->
-<script>
-  document.addEventListener("click", function runOnce() {
-    const code = document.getElementById("delayed-script").textContent;
-    try {
-      new Function(code)(); // safer than eval
-    } catch (err) {
-      console.error("Script execution failed:", err);
-    }
-    document.removeEventListener("click", runOnce); // prevents running again
-  });
 </script>
 
 </body>
